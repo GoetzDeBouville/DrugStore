@@ -17,7 +17,7 @@ constraintlayout = "2.1.4"
 nav = "2.7.7"
 hilt = "2.49"
 ksp = "1.9.21-1.0.15"
-
+lifecycle = "2.7.0"
 retrofit = "2.10.0"
 
 [libraries]
@@ -44,8 +44,8 @@ retrofit-impl = { group = "com.squareup.retrofit2", name = "retrofit", version.r
 retrofit-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 
 #lifecycle
-lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycleViewmodelKtx" }
-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycle" }
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 
 [bundles]
 retrofit = [
@@ -59,7 +59,7 @@ navigation = [
 ]
 
 lifecycle = [
-"lifecycle-common-java8",
+    "lifecycle-common-java8",
     "lifecycle-viewmodel-ktx"
 ]
 
