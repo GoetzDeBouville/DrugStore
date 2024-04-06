@@ -24,7 +24,7 @@
             tools:src="@tools:sample/backgrounds/scenic" />
 
         <TextView
-            style="@style/Text.InfoTitle"
+            style="@style/Text.Medium.InfoTitleItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/margin_8dp"
@@ -33,7 +33,7 @@
             tools:text="@tools:sample/lorem/random" />
 
         <TextView
-            style="@style/Text.Description"
+            style="@style/Text.Regular.Description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="200"

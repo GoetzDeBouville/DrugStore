@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">DrugStore</string>
     <string name="list">Список</string>
+    <string name="where_to_buy">ГДЕ КУПИТЬ</string>
 </resources>
