@@ -1,4 +1,4 @@
-package com.hellcorp.ui
+package com.hellcorp.base
 
 import org.junit.Test
 
