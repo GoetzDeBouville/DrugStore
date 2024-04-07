@@ -5,5 +5,5 @@ import com.hellcorp.drugstore.core.data.network.response.DrugListSearchResponse
 import kotlinx.coroutines.flow.Flow
 
 interface DrugSearchRepository {
-    fun getDrugList(expression: String): Flow<Resource<DrugListSearchResponse>>
+    suspend fun getDrugList(expression: String): Flow<Resource<DrugListSearchResponse>>
 }

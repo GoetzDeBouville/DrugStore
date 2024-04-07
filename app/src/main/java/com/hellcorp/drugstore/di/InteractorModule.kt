@@ -10,14 +10,12 @@ import com.hellcorp.drugstore.druglist.domain.impl.DrugSearchInteractorImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
+import dagger.hilt.android.components.ViewModelComponent
 
 @Module
-@InstallIn(SingletonComponent::class)
+@InstallIn(ViewModelComponent::class)
 class InteractorModule {
     @Provides
-    @Singleton
     fun provideDrugInfoInteractor(
         repository: DrugInfoRepository,
         converter: Converter
@@ -25,7 +23,6 @@ class InteractorModule {
         DrugInfoInteractorImpl(repository, converter)
 
     @Provides
-    @Singleton
     fun provideDrugSearchInteractor(
         repository: DrugSearchRepository,
         converter: Converter

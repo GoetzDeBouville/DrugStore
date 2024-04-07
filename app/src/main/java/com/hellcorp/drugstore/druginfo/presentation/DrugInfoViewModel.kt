@@ -13,6 +13,4 @@ class DrugInfoViewModel @Inject constructor(interactor: DrugInfoInteractor) : Ba
     private val _state = MutableStateFlow<DrugInfoState>(DrugInfoState.Loading)
     val state: StateFlow<DrugInfoState>
         get() = _state
-
-    
 }

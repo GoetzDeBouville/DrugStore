@@ -1,5 +1,6 @@
 package com.hellcorp.drugstore.core.data
 
+import android.util.Log
 import com.hellcorp.drugstore.core.data.network.NetworkClient
 import com.hellcorp.drugstore.core.data.network.dto.Resource
 import com.hellcorp.drugstore.core.data.network.dto.Response
@@ -18,8 +19,10 @@ import java.io.IOException
 class DrugRepositoryImpl(
     private val networkClient: NetworkClient
 ) : DrugInfoRepository, DrugSearchRepository {
-    override fun getDrugList(expression: String): Flow<Resource<DrugListSearchResponse>> {
+
+    override suspend fun getDrugList(expression: String): Flow<Resource<DrugListSearchResponse>> {
         val request = DrugListSearchRequest(searchExpression = expression)
+        Log.i("MyLog", "DrugRepositoryImpl getDrugList")
         return handleResponse<DrugListSearchResponse> { networkClient.doRequest(request) }
     }
 
@@ -34,6 +37,7 @@ class DrugRepositoryImpl(
     ): Flow<Resource<T>> = flow {
         try {
             val response = functionToHandle()
+            Log.i("MyLog", "DrugRepositoryImpl response = ${response.resultCode}")
             when (response.resultCode) {
                 NO_INTERNET_ERROR -> emit(Resource.Error(NetworkErrors.NoInternet))
                 SUCCESS -> {

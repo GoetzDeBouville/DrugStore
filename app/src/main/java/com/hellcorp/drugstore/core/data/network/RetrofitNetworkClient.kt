@@ -3,6 +3,7 @@ package com.hellcorp.drugstore.core.data.network
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.util.Log
 import com.hellcorp.drugstore.core.data.network.dto.Response
 import com.hellcorp.drugstore.core.data.network.request.DrugListSearchRequest
 import com.hellcorp.drugstore.core.data.network.request.SingleDrugRequest
@@ -59,6 +60,7 @@ class RetrofitNetworkClient(
             searchExpression = dto.searchExpression
         ).apply {
             resultCode = SUCCESS
+            Log.i("MyLog", "makeDrugSearchRequest resultCode = $resultCode")
         }
     }
 
