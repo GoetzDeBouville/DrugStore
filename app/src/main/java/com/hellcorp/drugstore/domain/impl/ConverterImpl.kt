@@ -1,12 +1,12 @@
 package com.hellcorp.drugstore.domain.impl
 
-import com.hellcorp.drugstore.core.network.dto.CategoriesDto
-import com.hellcorp.drugstore.core.network.dto.DrugDto
-import com.hellcorp.drugstore.core.network.dto.FieldDto
-import com.hellcorp.drugstore.core.network.dto.FlagsDto
-import com.hellcorp.drugstore.core.network.dto.Resource
-import com.hellcorp.drugstore.core.network.response.DrugListSearchResponse
-import com.hellcorp.drugstore.core.network.response.SingleDrugResponse
+import com.hellcorp.drugstore.core.data.network.dto.CategoriesDto
+import com.hellcorp.drugstore.core.data.network.dto.DrugDto
+import com.hellcorp.drugstore.core.data.network.dto.FieldDto
+import com.hellcorp.drugstore.core.data.network.dto.FlagsDto
+import com.hellcorp.drugstore.core.data.network.dto.Resource
+import com.hellcorp.drugstore.core.data.network.response.DrugListSearchResponse
+import com.hellcorp.drugstore.core.data.network.response.SingleDrugResponse
 import com.hellcorp.drugstore.domain.api.Converter
 import com.hellcorp.drugstore.domain.models.Categories
 import com.hellcorp.drugstore.domain.models.Drug

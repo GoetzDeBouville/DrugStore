@@ -1,4 +1,4 @@
-package com.hellcorp.drugstore.core.network.dto
+package com.hellcorp.drugstore.core.data.network.dto
 
 import com.hellcorp.drugstore.domain.models.NetworkErrors
 

@@ -1,7 +1,7 @@
-package com.hellcorp.drugstore.core.network
+package com.hellcorp.drugstore.core.data.network
 
-import com.hellcorp.drugstore.core.network.dto.DrugDto
-import com.hellcorp.drugstore.core.network.response.DrugListSearchResponse
+import com.hellcorp.drugstore.core.data.network.dto.DrugDto
+import com.hellcorp.drugstore.core.data.network.response.DrugListSearchResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

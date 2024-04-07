@@ -1,12 +1,12 @@
-package com.hellcorp.drugstore.core.network
+package com.hellcorp.drugstore.core.data.network
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import com.hellcorp.drugstore.core.network.dto.Response
-import com.hellcorp.drugstore.core.network.request.DrugListSearchRequest
-import com.hellcorp.drugstore.core.network.request.SingleDrugRequest
-import com.hellcorp.drugstore.core.network.response.SingleDrugResponse
+import com.hellcorp.drugstore.core.data.network.dto.Response
+import com.hellcorp.drugstore.core.data.network.request.DrugListSearchRequest
+import com.hellcorp.drugstore.core.data.network.request.SingleDrugRequest
+import com.hellcorp.drugstore.core.data.network.response.SingleDrugResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
