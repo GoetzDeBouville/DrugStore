@@ -2,4 +2,10 @@
     <string name="app_name">DrugStore</string>
     <string name="list">Список</string>
     <string name="where_to_buy">ГДЕ КУПИТЬ</string>
+
+
+    <string name="no_internet">Нет интернета</string>
+    <string name="server_error">Ошибка сервера</string>
+    <string name="no_drug_list">Не удалось получить список товаров</string>
+    <string name="no_drug_info">Не удалось получить информацию о товаре</string>
 </resources>

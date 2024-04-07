@@ -1,4 +1,4 @@
-package com.hellcorp.drugstore.domain.impl
+package com.hellcorp.drugstore.core
 
 import com.hellcorp.drugstore.core.data.network.dto.CategoriesDto
 import com.hellcorp.drugstore.core.data.network.dto.DrugDto
