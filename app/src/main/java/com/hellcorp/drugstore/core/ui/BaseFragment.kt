@@ -1,4 +1,4 @@
-package com.hellcorp.drugstore.base
+package com.hellcorp.drugstore.core.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-
 
 typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
 

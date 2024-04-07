@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        binding.toolbar.setTitleTextAppearance(this, R.style.Text_AppearanceToolbar)
+        binding.toolbar.setTitleTextAppearance(this, R.style.Text_Medium_AppearanceToolbar)
 
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)

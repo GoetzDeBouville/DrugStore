@@ -1,4 +1,4 @@
-package com.hellcorp.drugstore.base
+package com.hellcorp.drugstore.core.ui
 
 import androidx.lifecycle.ViewModel
 

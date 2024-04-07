@@ -1,7 +1,7 @@
-package com.hellcorp.drugstore.presentation.druglist
+package com.hellcorp.drugstore.druginfo.presentation
 
 import androidx.fragment.app.viewModels
-import com.hellcorp.drugstore.base.BaseFragment
+import com.hellcorp.drugstore.core.ui.BaseFragment
 import com.hellcorp.drugstore.databinding.FragmentDrugInfoBinding
 
 class DrugInfoFragment :

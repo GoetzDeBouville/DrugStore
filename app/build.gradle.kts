@@ -57,4 +57,5 @@ dependencies {
     implementation(libs.bundles.navigation)
 
     implementation(libs.bundles.retrofit)
+    implementation(libs.coil)
 }
