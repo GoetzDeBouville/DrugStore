@@ -14,6 +14,6 @@ class DrugSearchInteractorImpl(
 ) : DrugSearchInteractor {
     override suspend fun getDrugList(expression: String): Flow<Resource<DrugListSearchResult>> =
         repository.getDrugList(expression).map {
-            converter.map(it)
+            converter.mapDrugList(it)
         }
 }

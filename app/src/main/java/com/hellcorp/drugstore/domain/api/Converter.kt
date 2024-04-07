@@ -7,6 +7,6 @@ import com.hellcorp.drugstore.domain.models.Drug
 import com.hellcorp.drugstore.domain.models.DrugListSearchResult
 
 interface Converter {
-    fun map(from : Resource<SingleDrugResponse>) : Resource<Drug>
-    fun map(from : Resource<DrugListSearchResponse>) : Resource<DrugListSearchResult>
+    fun mapDrugInfo(from : Resource<SingleDrugResponse>) : Resource<Drug>
+    fun mapDrugList(from : Resource<DrugListSearchResponse>) : Resource<DrugListSearchResult>
 }

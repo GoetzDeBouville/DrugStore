@@ -14,6 +14,6 @@ class DrugInfoInteractorImpl(
 ) : DrugInfoInteractor {
     override suspend fun getDrugInfo(id: Int): Flow<Resource<Drug>> =
         repository.getDrugInfo(id).map {
-            converter.map(it)
+            converter.mapDrugInfo(it)
         }
 }

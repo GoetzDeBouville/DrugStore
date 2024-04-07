@@ -16,7 +16,7 @@ import com.hellcorp.drugstore.domain.models.Flags
 import com.hellcorp.drugstore.domain.models.NetworkErrors
 
 class ConverterImpl : Converter {
-    override fun map(from: Resource<SingleDrugResponse>): Resource<Drug> {
+    override fun mapDrugInfo(from: Resource<SingleDrugResponse>): Resource<Drug> {
         return when (from) {
             is Resource.Success -> {
                 from.data?.let {
@@ -30,7 +30,7 @@ class ConverterImpl : Converter {
         }
     }
 
-    override fun map(from: Resource<DrugListSearchResponse>): Resource<DrugListSearchResult> {
+    override fun mapDrugList(from: Resource<DrugListSearchResponse>): Resource<DrugListSearchResult> {
         return when (from) {
             is Resource.Success -> {
                 Resource.Success(
