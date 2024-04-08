@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.druglistFragment -> supportActionBar?.setTitle(R.string.list)
-                else -> actionBar?.title = ""
+                else -> supportActionBar?.title = ""
             }
         }
     }

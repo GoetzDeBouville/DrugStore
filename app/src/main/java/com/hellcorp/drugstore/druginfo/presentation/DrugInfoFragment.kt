@@ -13,7 +13,6 @@ import com.hellcorp.drugstore.databinding.FragmentDrugInfoBinding
 import com.hellcorp.drugstore.domain.models.Drug
 import com.hellcorp.drugstore.druginfo.domain.DrugInfoState
 import com.hellcorp.drugstore.druglist.presentation.DruglistFragment.Companion.ARG_ID
-import com.hellcorp.drugstore.utils.Constants.Companion.BASE_URL
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -23,7 +22,6 @@ class DrugInfoFragment :
     override val viewModel: DrugInfoViewModel by viewModels<DrugInfoViewModel>()
 
     private var id: Int? = null
-
 
     override fun initViews() {
         super.initViews()
@@ -39,6 +37,10 @@ class DrugInfoFragment :
             viewModel.state.collect { state ->
                 manageState(state)
             }
+        }
+
+        binding.cvGeo.setOnClickListener {
+            // TODO
         }
     }
 
