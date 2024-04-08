@@ -9,12 +9,12 @@ interface DrugService {
     @GET("/api/ppp/index/")
     fun getDrugList(
         @Query("search") searchExpression: String?,
-//        @Query("id") categoryId: Int? = null,
-//        @Query("crop_id") cropId: Int? = null,
-//        @Query("harmful_object_id") harmfulObjectId: Int? = null,
-//        @Query("ingredient_id") ingredientId: Int? = null,
-//        @Query("offset") offset: Int? = null,
-//        @Query("limit") limit: Int? = null
+        @Query("id") categoryId: Int? = null,
+        @Query("crop_id") cropId: Int? = null,
+        @Query("harmful_object_id") harmfulObjectId: Int? = null,
+        @Query("ingredient_id") ingredientId: Int? = null,
+        @Query("offset") offset: Int? = null,
+        @Query("limit") limit: Int? = null
     ): DrugListSearchResponse
 
     @GET("/api/ppp/item/")

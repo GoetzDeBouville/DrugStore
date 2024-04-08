@@ -6,6 +6,7 @@ import com.hellcorp.drugstore.core.data.network.DrugService
 import com.hellcorp.drugstore.core.data.network.NetworkClient
 import com.hellcorp.drugstore.core.data.network.RetrofitNetworkClient
 import com.hellcorp.drugstore.domain.api.Converter
+import com.hellcorp.drugstore.utils.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,7 +22,7 @@ class DataModule {
     @Provides
     @Singleton
     fun provideDrugService(): DrugService = Retrofit.Builder()
-        .baseUrl("http://shans.d2.i-partner.ru")
+        .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(DrugService::class.java)
@@ -36,5 +37,5 @@ class DataModule {
 
     @Provides
     @Singleton
-    fun provideConverter() : Converter = ConverterImpl()
+    fun provideConverter(): Converter = ConverterImpl()
 }

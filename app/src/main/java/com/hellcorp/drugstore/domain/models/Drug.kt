@@ -1,5 +1,7 @@
 package com.hellcorp.drugstore.domain.models
 
+import com.hellcorp.drugstore.utils.Constants
+
 data class Drug(
     val id: Int,
     val categories: Categories?,
@@ -9,9 +11,5 @@ data class Drug(
     val image: String?,
     val name: String?,
     val fields: List<Field>?,
-    val imageUrl: String? = image?.let { "$baseUrl$it" }
-) {
-    companion object {
-        private const val baseUrl = "http://shans.d2.i-partner.ru"
-    }
-}
+    val imageUrl: String? = image?.let { "${Constants.BASE_URL}$it" }
+)

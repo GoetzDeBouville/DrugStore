@@ -11,6 +11,10 @@ import com.hellcorp.drugstore.core.data.network.response.SingleDrugResponse
 import com.hellcorp.drugstore.domain.models.NetworkErrors
 import com.hellcorp.drugstore.druginfo.domain.api.DrugInfoRepository
 import com.hellcorp.drugstore.druglist.domain.api.DrugSearchRepository
+import com.hellcorp.drugstore.utils.Constants.Companion.CLIENT_ERROR
+import com.hellcorp.drugstore.utils.Constants.Companion.NO_INTERNET_ERROR
+import com.hellcorp.drugstore.utils.Constants.Companion.SERVER_ERROR
+import com.hellcorp.drugstore.utils.Constants.Companion.SUCCESS
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
@@ -64,12 +68,5 @@ class DrugRepositoryImpl(
             e.printStackTrace()
             emit(Resource.Error(NetworkErrors.ServerError))
         }
-    }
-
-    companion object {
-        private const val CLIENT_ERROR = 400
-        private const val SERVER_ERROR = 500
-        private const val NO_INTERNET_ERROR = -1
-        private const val SUCCESS = 200
     }
 }

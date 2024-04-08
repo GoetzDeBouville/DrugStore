@@ -17,6 +17,7 @@ class DruglistFragment :
 
     override fun subscribe() {
         super.subscribe()
+        viewModel.getVacancies("ин")
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.state.collect { state ->
                 Log.i("MyLog", "state = $state")
