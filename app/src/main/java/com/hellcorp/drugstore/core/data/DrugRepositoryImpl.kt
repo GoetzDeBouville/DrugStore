@@ -26,7 +26,6 @@ class DrugRepositoryImpl(
 
     override suspend fun getDrugList(expression: String): Flow<Resource<DrugListSearchResponse>> {
         val request = DrugListSearchRequest(searchExpression = expression)
-        Log.i("MyLog", "DrugRepositoryImpl getDrugList")
         return handleResponse<DrugListSearchResponse> { networkClient.doRequest(request) }
     }
 
@@ -41,7 +40,6 @@ class DrugRepositoryImpl(
     ): Flow<Resource<T>> = flow {
         try {
             val response = functionToHandle()
-            Log.i("MyLog", "DrugRepositoryImpl response = ${response.resultCode}")
             when (response.resultCode) {
                 NO_INTERNET_ERROR -> emit(Resource.Error(NetworkErrors.NoInternet))
                 SUCCESS -> {

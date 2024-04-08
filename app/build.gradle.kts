@@ -58,4 +58,5 @@ dependencies {
 
     implementation(libs.bundles.retrofit)
     implementation(libs.coil)
+//    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }

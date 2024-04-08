@@ -14,6 +14,7 @@ import com.hellcorp.drugstore.domain.models.DrugListSearchResult
 import com.hellcorp.drugstore.domain.models.Field
 import com.hellcorp.drugstore.domain.models.Flags
 import com.hellcorp.drugstore.domain.models.NetworkErrors
+import com.hellcorp.drugstore.utils.Constants.Companion.BASE_URL
 
 class ConverterImpl : Converter {
     override fun mapDrugInfo(from: Resource<SingleDrugResponse>): Resource<Drug> {
@@ -52,18 +53,16 @@ class ConverterImpl : Converter {
         description = from.description,
         documentation = from.documentation,
         gtin = from.gtin,
-        image = from.image,
         name = from.name,
         fields = from.fields?.map { map(it) },
-        imageUrl = from.imageUrl
+        imageUrl = from.image?.let { "$BASE_URL${from.image}" }
     )
 
     private fun map(from: CategoriesDto): Categories = Categories(
         id = from.id,
-        icon = from.icon,
         image = from.image,
         name = from.name,
-        iconUrl = from.iconUrl
+        iconUrl = from.icon?.let { "$BASE_URL${from.icon}" }
     )
 
     private fun map(from: FieldDto): Field = Field(

@@ -17,6 +17,7 @@
         android:padding="@dimen/padding_4dp">
 
         <ImageView
+            android:id="@+id/iv_image"
             android:layout_width="match_parent"
             android:layout_height="@dimen/image_height_80dp"
             android:layout_marginVertical="@dimen/padding_16dp"
@@ -24,6 +25,7 @@
             tools:src="@tools:sample/backgrounds/scenic" />
 
         <TextView
+            android:id="@+id/tv_title"
             style="@style/Text.Medium.InfoTitleItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,11 +35,12 @@
             tools:text="@tools:sample/lorem/random" />
 
         <TextView
+            android:id="@+id/tv_description"
             style="@style/Text.Regular.Description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="200"
-            tools:text="@tools:sample/lorem/random"/>
+            tools:text="@tools:sample/lorem/random" />
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

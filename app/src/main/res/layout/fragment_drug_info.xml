@@ -87,4 +87,9 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+    <include
+        android:id="@+id/error_message"
+        layout="@layout/error_message_block"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

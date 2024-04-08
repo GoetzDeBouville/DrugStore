@@ -21,7 +21,7 @@ class DrugListViewModel @Inject constructor(private val interactor: DrugSearchIn
     val state: StateFlow<DrugSearchScreenState>
         get() = _state
 
-    fun getVacancies(expression: String) {
+    fun getDrugList(expression: String) {
         if (expression.isNotEmpty()) {
             _state.value = DrugSearchScreenState.Loading
             viewModelScope.launch {

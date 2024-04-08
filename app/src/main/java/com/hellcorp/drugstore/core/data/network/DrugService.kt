@@ -1,13 +1,12 @@
 package com.hellcorp.drugstore.core.data.network
 
 import com.hellcorp.drugstore.core.data.network.dto.DrugDto
-import com.hellcorp.drugstore.core.data.network.response.DrugListSearchResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface DrugService {
     @GET("/api/ppp/index/")
-    fun getDrugList(
+    suspend fun getDrugList(
         @Query("search") searchExpression: String?,
         @Query("id") categoryId: Int? = null,
         @Query("crop_id") cropId: Int? = null,
@@ -15,10 +14,10 @@ interface DrugService {
         @Query("ingredient_id") ingredientId: Int? = null,
         @Query("offset") offset: Int? = null,
         @Query("limit") limit: Int? = null
-    ): DrugListSearchResponse
+    ): List<DrugDto>
 
     @GET("/api/ppp/item/")
-    fun getDrugDetails(
+    suspend fun getDrugDetails(
         @Query("id") drugId: Int
     ): DrugDto
 }

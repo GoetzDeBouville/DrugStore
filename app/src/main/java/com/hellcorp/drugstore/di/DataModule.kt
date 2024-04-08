@@ -24,6 +24,11 @@ class DataModule {
     fun provideDrugService(): DrugService = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
+//        .client(
+//            OkHttpClient.Builder()
+//                .addNetworkInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+//                .build()
+//        )
         .build()
         .create(DrugService::class.java)
 

@@ -8,8 +8,7 @@ data class Drug(
     val description: String?,
     val documentation: Any?,
     val gtin: String?,
-    val image: String?,
     val name: String?,
     val fields: List<Field>?,
-    val imageUrl: String? = image?.let { "${Constants.BASE_URL}$it" }
+    val imageUrl: String?
 )
