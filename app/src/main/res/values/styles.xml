@@ -37,4 +37,36 @@
     <style name="Text.Regular.Description.Info">
         <item name="android:textSize">@dimen/text_15sp</item>
     </style>
+
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="hintTextAppearance">@style/Text.Regular.Description</item>
+        <item name="hintTextColor">@color/gray</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_8dp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_8dp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_8dp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_8dp</item>
+        <item name="placeholderTextAppearance">@style/Text.Medium.InfoTitle</item>
+        <item name="placeholderTextColor">@color/black</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+    </style>
+
+    <style name="TextInputEditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:inputType">text</item>
+        <item name="hintEnabled">false</item>
+    </style>
 </resources>

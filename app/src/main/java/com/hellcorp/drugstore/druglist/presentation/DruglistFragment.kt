@@ -3,6 +3,7 @@ package com.hellcorp.drugstore.druglist.presentation
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -17,7 +18,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class DruglistFragment :
     BaseFragment<FragmentDruglistBinding, DrugListViewModel>(FragmentDruglistBinding::inflate) {
-    override val viewModel: DrugListViewModel by viewModels<DrugListViewModel>()
+    override val viewModel: DrugListViewModel by activityViewModels<DrugListViewModel>()
 
     private val drugListAdapter = DrugListAdapter(
         clickListener = {
@@ -30,7 +31,6 @@ class DruglistFragment :
 
     override fun subscribe() {
         super.subscribe()
-        viewModel.getDrugList("ин")
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.state.collect { state ->
                 manageState(state)

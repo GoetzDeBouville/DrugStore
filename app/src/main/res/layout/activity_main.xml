@@ -36,6 +36,29 @@
         android:titleTextColor="@color/white"
         app:layout_constraintTop_toTopOf="parent">
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_search_field"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            android:visibility="gone"
+            app:endIconDrawable="@drawable/ic_search_24dp"
+            app:endIconMode="custom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_search_field"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search"
+                android:imeOptions="actionDone"
+                android:paddingStart="@dimen/margin_16dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
         <ImageView
             android:id="@+id/iv_search"
             android:layout_width="wrap_content"
