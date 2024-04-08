@@ -21,7 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "DrugStore"
 include(":app")
-include(":core:network")
-include(":features:druglist")
-include(":core:base")
-include(":features:druginfo")

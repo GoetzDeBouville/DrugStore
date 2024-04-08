@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/margin_16dp"
+    android:layout_marginTop="@dimen/margin_16dp"
+    tools:context=".druginfo.presentation.DrugInfoFragment">
+
+    <ImageView
+        android:id="@+id/iv_icon_category"
+        android:layout_width="@dimen/icon_category_dimen_32dp"
+        android:layout_height="@dimen/icon_category_dimen_32dp"
+        android:layout_margin="@dimen/margin_16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/ic_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16dp"
+        android:src="@drawable/ic_star_32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_item_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/ic_star"
+        app:layout_constraintStart_toEndOf="@id/iv_icon_category"
+        app:layout_constraintTop_toTopOf="@+id/iv_icon_category"
+        tools:src="@tools:sample/avatars" />
+
+
+    <TextView
+        android:id="@+id/tv_item_title"
+        style="@style/Text.Medium.InfoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/iv_item_image"
+        tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+        android:id="@+id/tv_item_info"
+        style="@style/Text.Regular.Description.Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_title"
+        tools:text="@tools:sample/lorem/random" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_geo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_16dp"
+        app:cardCornerRadius="@dimen/radius_8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_info"
+        app:strokeColor="@color/gray_stroke">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_8dp"
+                android:paddingHorizontal="@dimen/padding_4dp"
+                android:src="@drawable/ic_loaction_point_24dp" />
+
+            <TextView
+                style="@style/Text.Medium.SmallSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/where_to_buy" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <include
+        android:id="@+id/error_message"
+        layout="@layout/error_message_block"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

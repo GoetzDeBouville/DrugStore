@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    Margins-->
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_24dp">24dp</dimen>
+
+<!--    Paddings-->
+    <dimen name="padding_4dp">4dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+
+<!--    Font sizes-->
+    <dimen name="text_12sp">12sp</dimen>
+    <dimen name="text_13sp">13sp</dimen>
+    <dimen name="text_15sp">15sp</dimen>
+    <dimen name="text_16sp">16sp</dimen>
+    <dimen name="text_20sp">20sp</dimen>
+
+<!--    Radiuses-->
+    <dimen name="radius_8dp">8dp</dimen>
+
+    <dimen name="icon_category_dimen_32dp">32dp</dimen>
+    <dimen name="image_height_80dp">80dp</dimen>
+    <dimen name="card_height_296dp">296dp</dimen>
+</resources>

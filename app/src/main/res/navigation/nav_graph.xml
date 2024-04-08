@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/druglistFragment">
+
+    <fragment
+        android:id="@+id/druglistFragment"
+        android:name="com.hellcorp.drugstore.druglist.presentation.DruglistFragment"
+        android:label="fragment_druglist"
+        tools:layout="@layout/fragment_druglist">
+        <action
+            android:id="@+id/action_druglistFragment_to_drugInfoFragment"
+            app:destination="@id/drugInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/drugInfoFragment"
+        android:name="com.hellcorp.drugstore.druginfo.presentation.DrugInfoFragment"
+        android:label="fragment_drug_info"
+        tools:layout="@layout/fragment_drug_info" />
+</navigation>

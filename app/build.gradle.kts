@@ -53,4 +53,10 @@ dependencies {
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+
+    implementation(libs.bundles.navigation)
+
+    implementation(libs.bundles.retrofit)
+    implementation(libs.coil)
+//    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }

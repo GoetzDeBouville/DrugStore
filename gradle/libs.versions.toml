@@ -47,6 +47,9 @@ retrofit-converter = { group = "com.squareup.retrofit2", name = "converter-gson"
 lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycle" }
 lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 
+# Coil
+coil = "io.coil-kt:coil:2.3.0"
+
 [bundles]
 retrofit = [
     "retrofit-impl",
