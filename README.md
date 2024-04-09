@@ -6,7 +6,6 @@
 
 ![badge-Android](https://img.shields.io/badge/Platform-Android-brightgreen?logo=android&style=plastic)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.22-blue.svg?style=plastic&logo=kotlin)](https://kotlinlang.org)
-
 <br>
 
 ### Stack:
@@ -14,7 +13,7 @@
 - MVVM+StateFlow, Single Activity + Android Navigation, shared viewModel (для провайда обработки ввода (в тулбаре активити) на фрагмент)
 - DI - Hilt
 - [KSP](https://kotlinlang.org/docs/ksp-overview.html)
-- Retrofit2,
+- Retrofit2
 - [Coil](https://coil-kt.github.io/coil/) (Image caching)
 
 ## Screencast 
