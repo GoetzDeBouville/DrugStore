@@ -10,7 +10,8 @@
 DrugStore app using [iTunes Search API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1) <br>
 
 <br>
-### Stack: 
+
+### Stack:
 - Coroutines + Flow
 - MVVM+StateFlow, Single Activity + Android Navigation, shared viewModel (для провайда обработки ввода (в тулбаре активити) на фрагмент)
 - DI - Hilt
