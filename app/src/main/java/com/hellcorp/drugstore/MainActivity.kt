@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun onSubscribe() = with(binding) {
         clickListeners()
+
         tiSearchField.doOnTextChanged { text, _, _, _ ->
             viewModel.getDrugList(text.toString())
             if (text.toString().isNotEmpty()) {
@@ -49,7 +50,10 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.druglistFragment -> supportActionBar?.setTitle(R.string.list)
-                else -> supportActionBar?.title = ""
+                else -> {
+                    supportActionBar?.title = ""
+                    binding.tlSearchField.visibility = View.GONE
+                }
             }
         }
     }
